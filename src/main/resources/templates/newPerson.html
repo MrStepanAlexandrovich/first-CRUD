@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div>
+        <form method="POST" th:action="@{/people}" th:object="${newPerson}">
+            <label for="name">ФИО</label>
+            <input th:field="*{name}" id="name"> </br>
+
+            <label for="birthYear">Год рождения</label>
+            <input th:field="*{birthYear}" id="birthYear"> </br>
+
+            <input type="submit">
+        </form>
+    </div>
+</body>
+</html>

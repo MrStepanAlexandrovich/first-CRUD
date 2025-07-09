@@ -1,0 +1,23 @@
+button {
+    color: red;
+}
+
+form {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+body {
+    background-image: url("library.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.parent {
+    display: flex;
+    justify-content: center;
+}

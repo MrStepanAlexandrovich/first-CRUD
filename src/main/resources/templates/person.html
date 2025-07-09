@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div th:object="${person}">
+    <p th:text="${person.getName} + ', ' + ${person.getBirthYear}"></p>
+</div> </br>
+
+<div th:unless="${books.isEmpty()}">
+    <p>Книги:</p>
+    <p th:each="book : ${books}" th:text="${book.getAuthor()} + ', ' + ${book.getName()}
+    + ', ' + ${book.getReleaseYear()}"></p>
+</div>
+
+<div th:if="${books.isEmpty()}">
+    <p>Человек пока не брал книг</p>
+</div>
+</body>
+</html>

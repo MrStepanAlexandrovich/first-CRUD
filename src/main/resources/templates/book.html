@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div th:object="${book}">
+    <p th:text="${book.getName}"></p>
+    <p th:text="${book.getAuthor}"></p>
+    <p th:text="${book.getReleaseYear()}"></p>
+</div>
+
+<form th:method="DELETE" th:action="@{/books/{path}(path=${book.getId()})}">
+    <input type="submit" value="Удалить книгу">
+</form>
+
+
+<div th:if="${book.getPersonId() == null}">
+    <p>Книга свободна</p>
+</div>
+
+<form th:method="POST" th:action="@{/books/{id}(id=${book.getId()})}">
+    <select th:object="${person}" th:field="*{id}" id="person">
+        <option th:each="person : ${people}" th:value="${person.getId()}" th:text="${person.getName()}">
+        </option>
+    </select>
+    <input type="submit" value="Закрепить книгу за человеком">
+</form>
+
+</body>
+
+</html>

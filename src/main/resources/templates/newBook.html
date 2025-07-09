@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>
+    <form method="POST" th:action="@{/books}" th:object="${newBook}">
+        <label for="name">Название книги</label>
+        <input th:field="*{name}" id="name"> </br>
+
+        <label for="author">Автор</label>
+        <input th:field="*{author}" id="author"> </br>
+
+        <label for="releaseYear">Год</label>
+        <input th:field="*{releaseYear}" id="releaseYear"> </br>
+
+        <input type="submit">
+    </form>
+</div>
+</body>
+</html>
