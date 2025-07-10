@@ -40,8 +40,9 @@ public class BooksController {
                            Model model) {
         model.addAttribute("book", booksDAO.showBook(id));
         model.addAttribute("people", peopleDAO.showList());
-        model.addAttribute("person", new Person());
+        model.addAttribute("newPerson", new Person());
         model.addAttribute("bookIsFree", (booksDAO.showBook(id).getPersonId()) == null);
+        model.addAttribute("person", peopleDAO.show(id));
         return "book";
     }
 

@@ -30,4 +30,8 @@ public class PeopleDAO {
                 .findAny()
                 .orElse(null);
     }
+
+    public void delete(int id) {
+        jdbcTemplate.update("DELETE FROM person WHERE id=?", new Object[]{id});
+    }
 }

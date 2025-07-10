@@ -18,15 +18,20 @@
 
 <div th:if="${book.getPersonId() == null}">
     <p>Книга свободна</p>
-</div>
-
-<form th:method="POST" th:action="@{/books/{id}(id=${book.getId()})}">
-    <select th:object="${person}" th:field="*{id}" id="person">
+    <form th:method="POST" th:action="@{/books/{id}(id=${book.getId()})}">
+    <select th:object="${newPerson}" th:field="*{id}" id="person">
         <option th:each="person : ${people}" th:value="${person.getId()}" th:text="${person.getName()}">
         </option>
     </select>
     <input type="submit" value="Закрепить книгу за человеком">
-</form>
+    </form>
+</div>
+
+<div th:unless="${book.getPersonId() == null}" th:object="${person}">
+    <p th:text = "'Книгу взял(-а) ' + ${person.getName()}"> </p>
+</div>
+
+
 
 </body>
 
