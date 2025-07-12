@@ -1,0 +1,65 @@
+/* styles.css */
+
+/* Сброс отступов и полей */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Стили для тела документа */
+body {
+    /* Фон */
+    background-image: url('library4.jpg'); /* Укажите путь к вашему фоновому изображению */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+}
+
+/* Контейнер для кнопок */
+.buttons-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Расстояние между кнопками */
+    width: 300px; /* Ширина контейнера */
+    text-align: center;
+    flex-direction: column;
+    gap: 150px;
+}
+
+/* Стили кнопок */
+button {
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    width: 300px;
+    height: 100px;
+}
+
+/* Стилизация первой кнопки */
+.btn-primary {
+    background-color: #720101;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #540000;
+}
+
+/* Стилизация второй кнопки */
+.btn-secondary {
+    background-color: #2a5534;
+    color: white;
+}
+
+.btn-secondary:hover {
+    background-color: #013812;
+}

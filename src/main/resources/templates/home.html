@@ -1,22 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<div class="parent">
-    <div class="child">
+<div class="buttons-container">
         <form method="GET" action="people">
-            <button type="submit">Люди</button>
+            <button type="submit" class="btn-primary">Люди</button>
         </form>
-    </div>
-    <div class="child">
-        <form method="GET" action="books">
-            <button type="submit">Книги</button>
+        <form method="GET" action="books" class="button">
+            <button type="submit" class="btn-secondary">Книги</button>
         </form>
-    </div>
 </div>
 </body>
 </html>
